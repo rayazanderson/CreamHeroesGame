@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ]
 
+    cardArray.sort(() => 0.5 - Math.random())
+
     const grid = document.querySelector('.grid')
+    const resultDisplay = document.querySelector('#result')
     var cardsChosen = []
     var cardsChosenId = []
     var cardsWon = []
@@ -90,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkForMatch() {
         var cards = document.querySelectorAll('img')
         const optionOneId = cardsChosenId[0]
-        const OptionTwoId = cardsChosenId[1]
+        const optionTwoId = cardsChosenId[1]
         if (cardsChosen[0] === cardsChosen[1]) {
             alert('You found a match!')
             cards[optionOneId].setAttribute('src', 'images/Blank-White-square-thumbnail.jpg')
@@ -101,15 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionTwoId].setAttribute('src', 'images/Gingham-Black-Small.jpg')
             alert('Whoops! Try again')
         }
-
+        cardsChosen = []
+        cardsChosenId = []
+        resultDisplay.textContent = cardsWon.length
+        if (cardsWon.length === cardArray.length / 2) {
+            resultDisplay.textContent = 'Congratz! You found them all!'
+        }
     }
-    cardsChosen = []
-    cardsChosenId = []
-    resultDisplay
-}
 
 
-// Flip cards
+    // Flip cards
     function flipCard() {
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
