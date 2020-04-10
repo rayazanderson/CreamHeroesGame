@@ -1,11 +1,11 @@
-.grid{
+.grid {
     display: flex;
     flex-wrap: wrap;
     height: 300px;
     width: 400px;
 }
 
-.copyright p{
+.copyright p {
     font-size: 1.4rem;
     font-family: 'Wire One, sans serif';
 } 
