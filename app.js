@@ -3,69 +3,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // card options here
     const cardArray = [
+        // {
+        //     name: 'LaLa',
+        //     img: 'images/LaLa.jpg'
+        // },
+        // {
+        //     name: 'Lala',
+        //     img: 'images/LaLa.jpg'
+        // },
         {
-            name: 'LaLa',
-            img: 'images/20190705_LaLa.jpg'
-        },
-        {
-            name: 'Lala',
-            img: 'images/20190705_LaLa.jpg'
+            name: 'ChuChu',
+            img: 'images/ChuChu.jpg'
         },
         {
             name: 'ChuChu',
-            img: 'images/20190802_ChuChu.jpg'
-        },
-        {
-            name: 'ChuChu',
-            img: 'images/20190802_ChuChu.jpg'
+            img: 'images/ChuChu.jpg'
         },
         {
             name: 'LuLu',
-            img: 'images/20190802_LuLu.jpg'
+            img: 'images/LuLu.jpg'
         },
         {
             name: 'LuLu',
-            img: 'images/20190802_LuLu.jpg'
+            img: 'images/LuLu.jpg'
         },
         {
             name: 'TT',
-            img: 'images/20190802_TT.jpg'
+            img: 'images/TT.jpg'
         },
         {
             name: 'TT',
-            img: 'images/20190802_TT.jpg'
+            img: 'images/TT.jpg'
         },
         {
             name: 'MoMo',
-            img: 'images/20190809_MoMo.jpg'
+            img: 'images/MoMo.jpg'
         },
         {
             name: 'MoMo',
-            img: 'images/20190809_MoMo.jpg'
+            img: 'images/MoMo.jpg'
         },
         {
             name: 'DD',
-            img: 'images/20190816_DD.jpg'
+            img: 'images/DD.jpg'
         },
         {
             name: 'DD',
-            img: 'images/20190816_DD.jpg'
+            img: 'images/DD.jpg'
         },
         {
             name: 'Coco',
-            img: 'images/20190828_creamheroes_coco.jpg'
+            img: 'images/creamheroes_coco.jpg'
         },
         {
             name: 'Coco',
-            img: 'images/20190828_creamheroes_coco.jpg'
+            img: 'images/creamheroes_coco.jpg'
         },
         {
             name: 'All',
-            img: 'images/20190828_creamheroes_all.jpg'
+            img: 'images/creamheroes_all.jpg'
         },
         {
             name: 'All',
-            img: 'images/20190828_creamheroes_all.jpg'
+            img: 'images/creamheroes_all.jpg'
         },
 
     ]
@@ -76,13 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultDisplay = document.querySelector('#result')
     var cardsChosen = []
     var cardsChosenId = []
-    var cardsWon = []
+    const cardsWon = []
 
     // Game board goes here
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             var card = document.createElement('img')
-            card.setAttribute('src', 'images/Gingham-Black-Small.jpg')
+            card.setAttribute('src', 'images/Gingham.jpg')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
@@ -96,12 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const optionTwoId = cardsChosenId[1]
         if (cardsChosen[0] === cardsChosen[1]) {
             alert('You found a match!')
-            cards[optionOneId].setAttribute('src', 'images/Blank-White-square-thumbnail.jpg')
-            cards[optionTwoId].setAttribute('src', 'images/Blank-White-square-thumbnail.jpg')
+            cards[optionOneId].setAttribute('src', 'images/thumbnail.jpg')
+            cards[optionTwoId].setAttribute('src', 'images/thumbnail.jpg')
             cardsWon.push(cardsChosen)
         } else {
-            cards[optionOneId].setAttribute('src', 'images/Gingham-Black-Small.jpg')
-            cards[optionTwoId].setAttribute('src', 'images/Gingham-Black-Small.jpg')
+            cards[optionOneId].setAttribute('src', 'images/Gingham.jpg')
+            cards[optionTwoId].setAttribute('src', 'images/Gingham.jpg')
             alert('Whoops! Try again')
         }
         cardsChosen = []
