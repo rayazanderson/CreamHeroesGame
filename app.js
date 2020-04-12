@@ -3,14 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // card options here
     const cardArray = [
-        // {
-        //     name: 'LaLa',
-        //     img: 'images/LaLa.jpg'
-        // },
-        // {
-        //     name: 'Lala',
-        //     img: 'images/LaLa.jpg'
-        // },
+
         {
             name: 'ChuChu',
             img: 'images/ChuChu.jpg'
@@ -66,6 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'All',
             img: 'images/creamheroes_all.jpg'
+        },
+        {
+            name: 'LaLa',
+            img: 'images/LaLa.jpg'
+        },
+        {
+            name: 'LaLa',
+            img: 'images/LaLa.jpg'
         },
 
     ]
